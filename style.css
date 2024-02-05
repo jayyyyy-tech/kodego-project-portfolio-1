@@ -14,18 +14,18 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #184e77;
+  background-color: #606f49;
   position: sticky;
   top: 0;
   z-index: 2;
 }
 .logo {
-  color: #2afc95;
+  color: #e9f5db;
   font-weight: bold;
 }
 .navbar a {
   text-decoration: none;
-  color: #2de1fc;
+  color: #e9f5db;
   margin: 0 0.5rem;
   position: relative;
 }
@@ -53,8 +53,8 @@ section#home {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #99d98c;
-  color: #214f4b;
+  background-color: #dcebca;
+  color: #606f49;
   position: relative;
   margin: 0;
   z-index: 1;
@@ -65,14 +65,14 @@ section#home::after {
   content: "";
   inset: 0;
   left: 30%;
-  background-color: #34a0a4;
+  background-color: #849669;
   z-index: -1;
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 50% 55%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%, 55% 55%);
 }
 section#home p {
   max-width: 600px;
-  color: #2afc95;
-  mix-blend-mode: difference;
+  color: #728359;
+  /* mix-blend-mode: difference; */
 }
 section#home img {
   height: auto;
