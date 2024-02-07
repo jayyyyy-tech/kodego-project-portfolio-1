@@ -56,10 +56,9 @@ section#home {
   align-items: center;
   justify-content: center;
   background-color: #dcebca;
-  color: #606f49;
+  color: #254d32;
   position: relative;
   margin: 0;
-
   z-index: 1;
   overflow: hidden;
 }
@@ -74,7 +73,7 @@ section#home::after {
 }
 section#home p {
   max-width: 600px;
-  color: #728359;
+  color: #3a7d44;
 }
 section#home img {
   height: auto;
@@ -83,15 +82,120 @@ section#home img {
   max-height: 100%;
 }
 section#about,
-section#service,
+section#hobbies {
+  height: 95vh;
+  text-align: center;
+  background-color: #849669;
+  z-index: 1;
+  margin: 0;
+  position: relative;
+  scroll-margin-top: 50px;
+}
+section#about .text,
+section#hobbies .text,
+section#contact .text {
+  font-size: 2rem;
+  color: #254d32;
+}
+section#about::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: #dbe7c9;
+
+  z-index: -1;
+  clip-path: polygon(44% 0, 13% 55%, 30% 100%, 100% 100%, 100% 0);
+}
+section#about p {
+  max-width: 600px;
+  color: #606f49;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+section#hobbies {
+  height: 95vh;
+  text-align: center;
+  background-color: #dbe7c9;
+  z-index: 1;
+  margin: 0;
+  position: relative;
+  scroll-margin-top: 50px;
+}
+.gallery {
+  display: flex;
+  background-color: var(--background);
+  gap: 16px;
+  scale: 1.3;
+  margin-left: 240px;
+  margin-right: 240px;
+}
+.gallery .card {
+  position: relative;
+  left: 0;
+  margin-top: 10vh;
+  height: 140px;
+  width: fit-content;
+  background-color: var(--background);
+  border-radius: 8px;
+  transition: 1000ms all;
+  transform-origin: center left;
+  box-shadow: 0 5px 12px rgb(0, 0, 0, 0.5);
+  outline: 1px solid var(--background);
+  overflow: hidden;
+}
+.card img {
+  object-fit: cover;
+  height: 140px;
+  width: auto;
+  border-radius: 4px;
+}
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+.card:hover img {
+  overflow: hidden;
+  filter: blur(1px);
+}
+
+.card:hover figcaption {
+  font-size: 0.6rem;
+  position: absolute;
+  height: 80px;
+  width: 160px;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: end;
+  background: linear-gradient(
+    to top rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: #e9f5db;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+.card:hover ~ .card {
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(22px);
+}
+section#hobbies::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  left: 30%;
+  background-color: #849669;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 45% 80%);
+}
 section#contact {
   height: 95vh;
   text-align: center;
-}
-section#about h3,
-section#service h3 {
-  margin-top: 50px;
-}
-section#contact {
-  background-color: #849669;
+  scroll-margin-top: 50px;
+  background-color: #dcebca;
 }
