@@ -6,10 +6,9 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-}
-body {
   font-family: sans-serif;
 }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -20,6 +19,7 @@ header {
   right: 0;
   z-index: 2;
 }
+
 .logo {
   color: #e9f5db;
   font-weight: bold;
@@ -80,39 +80,44 @@ section#home img {
   margin-top: 120px;
   max-width: 100%;
   max-height: 100%;
+  filter: drop-shadow(5px 5px 20px #b5c99a);
 }
 section#about,
-section#hobbies {
+section#contact {
   height: 95vh;
-  text-align: center;
   background-color: #849669;
   z-index: 1;
   margin: 0;
   position: relative;
   scroll-margin-top: 50px;
 }
-section#about .text,
-section#hobbies .text,
-section#contact .text {
+section#about .title,
+section#hobbies .title,
+section#contact .title {
   font-size: 2rem;
   color: #254d32;
+  text-align: center;
 }
 section#about::after {
   position: absolute;
   content: "";
   inset: 0;
   background-color: #dbe7c9;
-
   z-index: -1;
   clip-path: polygon(44% 0, 13% 55%, 30% 100%, 100% 100%, 100% 0);
 }
-section#about p {
+section#about p,
+section#hobbies p {
   max-width: 600px;
   color: #606f49;
   display: flex;
   text-align: center;
   justify-content: center;
   margin: auto;
+  backdrop-filter: blur(10px);
+  background-color: rgba(225, 225, 225, 0.5);
+  border-radius: 5px;
+  padding: 5px;
 }
 section#hobbies {
   height: 95vh;
@@ -188,14 +193,49 @@ section#hobbies::after {
   position: absolute;
   content: "";
   inset: 0;
-  left: 30%;
+
   background-color: #849669;
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 45% 80%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 65% 100%);
 }
-section#contact {
-  height: 95vh;
+form {
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  scroll-margin-top: 50px;
-  background-color: #dcebca;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 10px;
+}
+section#contact .input {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  width: 250px;
+}
+
+section#contact .button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.button:hover {
+  background-color: rgb(135, 130, 130);
+  color: #000000;
+}
+section#contact::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  margin: 0;
+  background-color: #dbe7c9;
+  z-index: -1;
+  clip-path: polygon(65% 0, 35% 100%, 100% 100%, 100% 0);
 }
