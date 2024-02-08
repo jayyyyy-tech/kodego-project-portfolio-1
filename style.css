@@ -77,7 +77,7 @@ section#home p {
 }
 section#home .con button {
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1ps solid #254d32;
   padding: 10px;
   position: relative;
